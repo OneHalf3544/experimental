@@ -5,7 +5,8 @@
 
 <hibernate-configuration>
     <session-factory>
-        <mapping class="ru.onehalf.testprogram.data.TestQuestion" />
-        <mapping class="ru.onehalf.testprogram.data.TestList" />
+        <mapping class="ru.onehalf.testprogram.data.dataobjects.TestQuestion" />
+        <mapping class="ru.onehalf.testprogram.data.dataobjects.Variant" />
+        <mapping class="ru.onehalf.testprogram.data.dataobjects.TestSet" />
     </session-factory>
 </hibernate-configuration>

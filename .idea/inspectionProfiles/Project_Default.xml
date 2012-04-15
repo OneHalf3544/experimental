@@ -3,5 +3,6 @@
     <option name="myName" value="Project Default" />
     <option name="myLocal" value="false" />
     <inspection_tool class="JpaDataSourceORMInspection" enabled="true" level="SERVER PROBLEM" enabled_by_default="true" />
+    <inspection_tool class="SpringJavaAutowiringInspection" enabled="true" level="WEAK WARNING" enabled_by_default="true" />
   </profile>
 </component>

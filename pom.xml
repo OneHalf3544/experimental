@@ -12,6 +12,7 @@
         <module>TesterModule</module>
         <module>WebInterfaceModule</module>
         <module>TestDataModule</module>
+        <module>TestCreatorModule</module>
     </modules>
 
     <properties>

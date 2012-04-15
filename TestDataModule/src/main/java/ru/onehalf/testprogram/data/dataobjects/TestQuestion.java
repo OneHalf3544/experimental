@@ -1,9 +1,7 @@
-package ru.onehalf.testprogram.data;
+package ru.onehalf.testprogram.data.dataobjects;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
+import java.util.List;
 
 /**
  * <p/>
@@ -18,10 +16,11 @@ import javax.persistence.Table;
 public class TestQuestion {
 
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "ID")
     private Integer id;
 
-    @Column(name = "TEST_SET")
+    @Column(name = "TEST_SET_ID")
     private Integer testSetNo;
 
     @Column(name = "TEST_NUMBER")
@@ -29,6 +28,12 @@ public class TestQuestion {
 
     @Column(name = "QUESTION", length = 255)
     private String question;
+
+    @OneToMany(fetch = FetchType.EAGER, mappedBy = "questionId", cascade = CascadeType.ALL)
+    private List<Variant> variants;
+
+    @Column(name = "RIGHT_ANSWER")
+    private Integer rightAnswer;
 
     public Integer getId() {
         return id;
@@ -60,5 +65,21 @@ public class TestQuestion {
 
     public void setQuestion(String question) {
         this.question = question;
+    }
+
+    public List<Variant> getVariants() {
+        return variants;
+    }
+
+    public void setVariants(List<Variant> variants) {
+        this.variants = variants;
+    }
+
+    public Integer getRightAnswer() {
+        return rightAnswer;
+    }
+
+    public void setRightAnswer(Integer rightAnswer) {
+        this.rightAnswer = rightAnswer;
     }
 }

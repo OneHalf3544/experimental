@@ -45,9 +45,22 @@
     </libraries>
     <table name="test_question" schema="" catalog="test_program" type="TABLE">
       <column name="ID" sqlType="INT" length="10" precision="0" nullable="false" jdbcType="4" autoIncrement="true" />
-      <column name="TEST_SET" sqlType="INT" length="10" precision="0" nullable="true" jdbcType="4" />
-      <column name="TEST_NUMBER" sqlType="INT" length="10" precision="0" nullable="true" jdbcType="4" />
-      <column name="QUESTION" sqlType="VARCHAR" length="255" precision="0" nullable="true" jdbcType="12" />
+      <column name="TEST_SET_ID" sqlType="INT" length="10" precision="0" nullable="false" jdbcType="4" />
+      <column name="TEST_NUMBER" sqlType="INT" length="10" precision="0" nullable="false" jdbcType="4" />
+      <column name="QUESTION" sqlType="VARCHAR" length="255" precision="0" nullable="false" jdbcType="12" />
+      <column name="RIGHT_ANSWER" sqlType="INT" length="10" precision="0" nullable="false" jdbcType="4" />
+      <primary-key name="PRIMARY" columns="id" />
+    </table>
+    <table name="test_sets" schema="" catalog="test_program" type="TABLE">
+      <column name="ID" sqlType="INT" length="10" precision="0" nullable="false" jdbcType="4" autoIncrement="true" />
+      <column name="NAME" sqlType="VARCHAR" length="45" precision="0" nullable="true" jdbcType="12" />
+      <column name="DESCRIPTION" sqlType="LONGTEXT" length="2147483647" precision="0" nullable="false" jdbcType="-1" />
+      <primary-key name="PRIMARY" columns="id" />
+    </table>
+    <table name="variants" schema="" catalog="test_program" type="TABLE">
+      <column name="ID" sqlType="INT" length="10" precision="0" nullable="false" jdbcType="4" autoIncrement="true" />
+      <column name="QUESTION_ID" sqlType="INT" length="10" precision="0" nullable="false" jdbcType="4" />
+      <column name="TEXT" sqlType="VARCHAR" length="1000" precision="0" nullable="false" jdbcType="12" />
       <primary-key name="PRIMARY" columns="id" />
     </table>
   </data-source>

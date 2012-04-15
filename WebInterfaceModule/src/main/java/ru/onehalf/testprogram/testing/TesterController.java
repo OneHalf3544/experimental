@@ -2,10 +2,10 @@ package ru.onehalf.testprogram.testing;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.ModelAttribute;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.validation.BindingResult;
+import org.springframework.web.bind.annotation.*;
 import ru.onehalf.testprogram.data.dao.TestQuestionDao;
+import ru.onehalf.testprogram.data.dao.TestSetDao;
 
 import javax.validation.Valid;
 import java.util.Map;
@@ -24,6 +24,9 @@ public class TesterController {
     @Autowired
     private TestQuestionDao testDataDao;
 
+    @Autowired
+    private TestSetDao testSetDao;
+
     @RequestMapping("/")
     public String tester() {
         return "index";
@@ -37,6 +40,30 @@ public class TesterController {
 
         model.put("question", testDataDao.getQuestion(testSet, testNumber));
         
-        return "testingPage";
+        return "testing/testingPage";
+    }
+
+    @RequestMapping(value = "/testAnswer", method = RequestMethod.POST)
+    public String testAnswerPage(@ModelAttribute("answer") @Valid QuestionAnswer questionAnswer, BindingResult bindingResult) {
+        if (bindingResult.hasErrors()) {
+            return "errorAnswer";
+        }
+        return "testing/testAnswer";
+    }
+
+    @RequestMapping(value = "/testSetSelect", params = "!testSetNumber")
+    public String testSetSelect(Map<String,Object> map) {
+        map.put("testSetContent", testSetDao.loadTestSetList());
+
+        return "testing/testSetSelect";
+    }
+
+    @RequestMapping(value = "/testSetSelect", params = "testSetNumber")
+    public String testSetSelect(
+            @ModelAttribute("testSetNumber")
+            @RequestParam("testSetNumber")
+            Long testSetId) {
+
+        return "forward:/testing/"+testSetId+"/0";
     }
 }

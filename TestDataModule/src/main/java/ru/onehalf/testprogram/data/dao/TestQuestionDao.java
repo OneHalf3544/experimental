@@ -1,7 +1,6 @@
 package ru.onehalf.testprogram.data.dao;
 
-import ru.onehalf.testprogram.data.TestList;
-import ru.onehalf.testprogram.data.TestQuestion;
+import ru.onehalf.testprogram.data.dataobjects.TestQuestion;
 
 import java.util.List;
 
