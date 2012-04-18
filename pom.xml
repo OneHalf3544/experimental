@@ -9,10 +9,15 @@
     <packaging>pom</packaging>
     <version>1.0</version>
     <modules>
+        <!-- Модуль выполнения тестирования -->
         <module>TesterModule</module>
+        <!-- Модуль web-интерфейса (инициализация DispatcherServlet и т.п.) -->
         <module>WebInterfaceModule</module>
+        <!-- Модуль с dao-шками для получения/сохранения данных о тестах -->
         <module>TestDataModule</module>
+        <!-- Модуль создания тестов -->
         <module>TestCreatorModule</module>
+        <module>ResourceCopyMavenPlugIn</module>
     </modules>
 
     <properties>

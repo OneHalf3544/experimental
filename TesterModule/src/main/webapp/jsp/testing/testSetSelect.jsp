@@ -6,6 +6,7 @@
 <html>
 <head>
     <title><spring:message code="testset.selectpage.title"/></title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 </head>
 <body>
     <h1><spring:message code="testset.selectpage.title"/></h1>
@@ -18,6 +19,8 @@
                 <dd>${each.description}</dd>
             </c:forEach>
         </dl>
+        <spring:message var="submitText" code="testset.selectpage.submittext"/>
+        <input type="submit" value="${submitText}"/>
     </form>
 </body>
 </html>

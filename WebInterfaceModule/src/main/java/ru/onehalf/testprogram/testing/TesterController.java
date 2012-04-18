@@ -1,5 +1,6 @@
 package ru.onehalf.testprogram.testing;
 
+import org.apache.maven.Maven;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.validation.BindingResult;
@@ -20,6 +21,8 @@ import java.util.Map;
  */
 @Controller
 public class TesterController {
+
+    private Maven maven;
 
     @Autowired
     private TestQuestionDao testDataDao;
@@ -64,6 +67,6 @@ public class TesterController {
             @RequestParam("testSetNumber")
             Long testSetId) {
 
-        return "forward:/testing/"+testSetId+"/0";
+        return "forward:/spring/testing/"+testSetId+"/0";
     }
 }

@@ -11,17 +11,47 @@
 
     <artifactId>WebInterfaceModule</artifactId>
 
+    <properties>
+        <webappDirectory>${project.build.outputDirectory}/webappResources</webappDirectory>
+    </properties>
+
     <build>
         <resources>
             <resource>
                 <directory>src/main/config</directory>
             </resource>
+            <resource>
+                <directory>src/main/resources</directory>
+            </resource>
         </resources>
+
         <plugins>
+            <plugin>
+                <artifactId>maven-assembly-plugin</artifactId>
+                <version>2.2.2</version>
+                <executions>
+                    <execution>
+                        <phase>process-resources</phase>
+                        <goals>
+                            <goal>directory</goal>
+                        </goals>
+                    </execution>
+                </executions>
+                <configuration>
+                    <descriptors>
+                        <descriptor>src/main/assembly/assembly.xml</descriptor>
+                    </descriptors>
+                </configuration>
+            </plugin>
+
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-war-plugin</artifactId>
                 <version>2.2</version>
+                <configuration>
+                    <webappDirectory>${webappDirectory}</webappDirectory>
+                    <warName>${project.groupId}</warName>
+                </configuration>
                 <executions>
                     <execution>
                         <goals>
@@ -34,6 +64,16 @@
     </build>
 
     <dependencies>
+        <dependency>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-assembly-plugin</artifactId>
+            <version>2.2.2</version>
+        </dependency>
+        <dependency>
+            <groupId>TestProgram</groupId>
+            <artifactId>TesterModule</artifactId>
+            <version>1.0</version>
+        </dependency>
         <dependency>
             <groupId>TestProgram</groupId>
             <artifactId>TestDataModule</artifactId>

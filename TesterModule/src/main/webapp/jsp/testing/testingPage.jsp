@@ -6,6 +6,7 @@
 <html>
     <head>
         <title>Testing page</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     </head>
     <body>
         <h1>Testing page</h1>
