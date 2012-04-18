@@ -12,7 +12,7 @@
     <artifactId>WebInterfaceModule</artifactId>
 
     <properties>
-        <webappDirectory>${project.build.outputDirectory}/webappResources</webappDirectory>
+        <webappDirectory>${project.build.directory}/webapp</webappDirectory>
     </properties>
 
     <build>
@@ -27,20 +27,24 @@
 
         <plugins>
             <plugin>
-                <artifactId>maven-assembly-plugin</artifactId>
-                <version>2.2.2</version>
+                <groupId>TestProgram</groupId>
+                <artifactId>maven-resource-copy-plugin</artifactId>
+                <version>1.0</version>
                 <executions>
                     <execution>
                         <phase>process-resources</phase>
                         <goals>
-                            <goal>directory</goal>
+                            <goal>copy</goal>
                         </goals>
                     </execution>
                 </executions>
                 <configuration>
-                    <descriptors>
-                        <descriptor>src/main/assembly/assembly.xml</descriptor>
-                    </descriptors>
+                    <sources>
+                        <source>../TestCreatorModule/src/main/webapp</source>
+                        <source>../TesterModule/src/main/webapp</source>
+                        <source>../WebInterfaceModule/src/main/webapp</source>
+                    </sources>
+                    <destination>${webappDirectory}</destination>
                 </configuration>
             </plugin>
 
@@ -64,11 +68,6 @@
     </build>
 
     <dependencies>
-        <dependency>
-            <groupId>org.apache.maven.plugins</groupId>
-            <artifactId>maven-assembly-plugin</artifactId>
-            <version>2.2.2</version>
-        </dependency>
         <dependency>
             <groupId>TestProgram</groupId>
             <artifactId>TesterModule</artifactId>

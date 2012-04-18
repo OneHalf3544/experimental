@@ -8,7 +8,17 @@
     <option name="originalFiles">
       <list>
         <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/MavenResourceCopyPlugIn/pom.xml" />
       </list>
+    </option>
+    <option name="ignoredFiles">
+      <set>
+        <option value="$PROJECT_DIR$/TestCreatorModule/pom.xml" />
+        <option value="$PROJECT_DIR$/TestDataModule/pom.xml" />
+        <option value="$PROJECT_DIR$/TesterModule/pom.xml" />
+        <option value="$PROJECT_DIR$/WebInterfaceModule/pom.xml" />
+        <option value="$PROJECT_DIR$/pom.xml" />
+      </set>
     </option>
   </component>
   <component name="ProjectResources">
