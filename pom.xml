@@ -17,6 +17,7 @@
         <module>TestDataModule</module>
         <!-- Модуль создания тестов -->
         <module>TestCreatorModule</module>
+        <module>CommonModule</module>
     </modules>
 
     <properties>

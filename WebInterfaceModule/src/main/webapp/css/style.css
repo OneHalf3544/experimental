@@ -1,0 +1,41 @@
+body {
+    color: black;
+    text-align: center;
+    background-color: #ffffff;
+}
+
+h1 {
+    margin-top: 0;
+    margin-bottom: 0;
+    color: #6495ed;
+}
+
+h2 {
+    margin-top: 0;
+    margin-bottom: 0;
+    color: #6495ed;
+}
+
+#bodyDiv {
+    margin-left: auto;
+    margin-right: auto;
+    padding: 20px;
+    width: 900px;
+    text-align: left;
+}
+#mainPane {
+    padding: 20px;
+    width: 600px;
+    float: left;
+    background-color: #f0f8ff;
+    min-height: 800px;
+}
+
+#rightColumn {
+    margin-left: 20px;
+    padding: 20px;
+    background-color: #f0f8ff;
+    width: 200px;
+    min-height: 800px;
+    float: left;
+}

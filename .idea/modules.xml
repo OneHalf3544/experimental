@@ -2,13 +2,14 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/CommonModule/CommonModule.iml" filepath="$PROJECT_DIR$/CommonModule/CommonModule.iml" />
       <module fileurl="file://$PROJECT_DIR$/MavenResourceCopyPlugIn/MavenResourceCopyPlugIn.iml" filepath="$PROJECT_DIR$/MavenResourceCopyPlugIn/MavenResourceCopyPlugIn.iml" />
       <module fileurl="file://$PROJECT_DIR$/TestCreatorModule/TestCreatorModule.iml" filepath="$PROJECT_DIR$/TestCreatorModule/TestCreatorModule.iml" />
       <module fileurl="file://$PROJECT_DIR$/TestDataModule/TestDataModule.iml" filepath="$PROJECT_DIR$/TestDataModule/TestDataModule.iml" />
       <module fileurl="file://$PROJECT_DIR$/TestProgram.iml" filepath="$PROJECT_DIR$/TestProgram.iml" />
       <module fileurl="file://$PROJECT_DIR$/TesterModule/TesterModule.iml" filepath="$PROJECT_DIR$/TesterModule/TesterModule.iml" />
       <module fileurl="file://$PROJECT_DIR$/WebInterfaceModule/WebInterfaceModule.iml" filepath="$PROJECT_DIR$/WebInterfaceModule/WebInterfaceModule.iml" />
-      <module fileurl="file://$PROJECT_DIR$/MavenResourceCopyPlugIn/maven-resource-copy-plugin.iml" filepath="$PROJECT_DIR$/MavenResourceCopyPlugIn/maven-resource-copy-plugin.iml" />
+      <module fileurl="file://$PROJECT_DIR$/maven-resource-copy-plugin/maven-resource-copy-plugin.iml" filepath="$PROJECT_DIR$/maven-resource-copy-plugin/maven-resource-copy-plugin.iml" />
     </modules>
   </component>
 </project>

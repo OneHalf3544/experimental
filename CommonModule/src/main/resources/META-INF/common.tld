@@ -12,6 +12,6 @@
     <!-- Invoke 'Generate' action to add tags or functions -->
     <tag-file>
         <name>htmlPageTemplate</name>
-        <path>htmlPageTemplate.tag</path>
+        <path>/META-INF/tags/htmlPageTemplate.tag</path>
     </tag-file>
 </taglib>

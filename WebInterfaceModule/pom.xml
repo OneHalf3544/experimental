@@ -75,6 +75,11 @@
         </dependency>
         <dependency>
             <groupId>TestProgram</groupId>
+            <artifactId>TestCreatorModule</artifactId>
+            <version>1.0</version>
+        </dependency>
+        <dependency>
+            <groupId>TestProgram</groupId>
             <artifactId>TestDataModule</artifactId>
             <version>1.0</version>
         </dependency>
