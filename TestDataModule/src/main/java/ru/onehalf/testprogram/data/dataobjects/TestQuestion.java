@@ -35,9 +35,8 @@ public class TestQuestion {
     /**
      * Правильный вариант
      */
-    @JoinColumn(name = "RIGHT_VARIANT_ID")
-    @OneToOne(mappedBy = "question")
-    private Variant rightAnswer;
+    @Column(name = "RIGHT_VARIANT_ID")
+    private Integer rightAnswer;
 
     public Integer getId() {
         return id;
@@ -79,11 +78,11 @@ public class TestQuestion {
         this.variants = variants;
     }
 
-    public Variant getRightAnswer() {
+    public Integer getRightAnswer() {
         return rightAnswer;
     }
 
-    public void setRightAnswer(Variant rightAnswer) {
+    public void setRightAnswer(Integer  rightAnswer) {
         this.rightAnswer = rightAnswer;
     }
 }

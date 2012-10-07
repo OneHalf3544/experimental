@@ -1,5 +1,7 @@
 package ru.onehalf.testprogram.data.dataobjects;
 
+import org.hibernate.annotations.ForeignKey;
+
 import javax.persistence.*;
 
 /**
@@ -27,7 +29,7 @@ public class Variant {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
 
-    @JoinColumn(name = "QUESTION_ID")
+    @ForeignKey(name = "QUESTION_ID", inverseName = "ID")
     @ManyToOne(cascade = CascadeType.ALL)
     private TestQuestion question;
     
