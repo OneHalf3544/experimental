@@ -9,14 +9,14 @@
     <packaging>pom</packaging>
     <version>1.0</version>
     <modules>
-        <!-- Модуль выполнения тестирования -->
-        <module>TesterModule</module>
-        <!-- Модуль web-интерфейса (инициализация DispatcherServlet и т.п.) -->
-        <module>WebInterfaceModule</module>
-        <!-- Модуль с dao-шками для получения/сохранения данных о тестах -->
-        <module>TestDataModule</module>
-        <!-- Модуль создания тестов -->
+        <!-- Module for create test's data -->
         <module>TestCreatorModule</module>
+        <!-- testing process module -->
+        <module>TesterModule</module>
+        <!-- web-interface module (initialize DispatcherServlet, etc.) -->
+        <module>WebInterfaceModule</module>
+        <!-- Dao module for operating with test's data -->
+        <module>TestDataModule</module>
         <module>CommonModule</module>
     </modules>
 
