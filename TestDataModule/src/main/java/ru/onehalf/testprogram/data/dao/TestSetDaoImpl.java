@@ -39,4 +39,10 @@ public class TestSetDaoImpl implements TestSetDao {
     public List<TestSet> loadTestSetList() {
         return hibernateTemplate.find("from TestSet order by name");
     }
+
+    @Override
+    @Transactional
+    public void saveOrUpdate(TestSet testSet) {
+        hibernateTemplate.saveOrUpdate(testSet);
+    }
 }

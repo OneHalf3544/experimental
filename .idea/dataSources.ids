@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?><component name="dataSourceStorage">
-  <data-source source="LOCAL" name=" contactmanager" product="MySQL" version="5.5.20" jdbc-version="4.0" driver-version="mysql-connector-java-5.1.18 ( Revision: tonci.grgin@oracle.com-20110930151701-jfj14ddfq48ifkfq )" uuid="6a70f38a-0261-4c26-a8bc-bae5302934c6">
+  <data-source source="LOCAL" name=" contactmanager" product="MySQL" version="5.5.20" jdbc-version="4.0" driver-name="" driver-version="mysql-connector-java-5.1.18 ( Revision: tonci.grgin@oracle.com-20110930151701-jfj14ddfq48ifkfq )" uuid="6a70f38a-0261-4c26-a8bc-bae5302934c6">
     <extra-name-characters>#@</extra-name-characters>
     <identifier-quote-string>`</identifier-quote-string>
     <jdbc-driver>com.mysql.jdbc.Driver</jdbc-driver>
@@ -26,7 +26,7 @@
       <primary-key name="PRIMARY" columns="id" />
     </table>
   </data-source>
-  <data-source source="LOCAL" name="TestProgram" product="MySQL" version="5.5.20" jdbc-version="4.0" driver-version="mysql-connector-java-5.1.18 ( Revision: tonci.grgin@oracle.com-20110930151701-jfj14ddfq48ifkfq )" uuid="69edebf3-bef4-4843-8fca-08ce72598ecf">
+  <data-source source="LOCAL" name="TestProgram" product="MySQL" version="5.5.20" jdbc-version="4.0" driver-name="MySQL-AB JDBC Driver" driver-version="mysql-connector-java-5.1.18 ( Revision: tonci.grgin@oracle.com-20110930151701-jfj14ddfq48ifkfq )" uuid="69edebf3-bef4-4843-8fca-08ce72598ecf">
     <extra-name-characters>#@</extra-name-characters>
     <identifier-quote-string>`</identifier-quote-string>
     <jdbc-driver>com.mysql.jdbc.Driver</jdbc-driver>
@@ -48,7 +48,7 @@
       <column name="TEST_SET_ID" sqlType="INT" length="10" precision="0" nullable="false" jdbcType="4" />
       <column name="TEST_NUMBER" sqlType="INT" length="10" precision="0" nullable="false" jdbcType="4" />
       <column name="QUESTION" sqlType="VARCHAR" length="255" precision="0" nullable="false" jdbcType="12" />
-      <column name="RIGHT_ANSWER" sqlType="INT" length="10" precision="0" nullable="false" jdbcType="4" />
+      <column name="RIGHT_VARIANT_ID" sqlType="INT" length="10" precision="0" nullable="false" jdbcType="4" />
       <primary-key name="PRIMARY" columns="id" />
     </table>
     <table name="test_sets" schema="" catalog="test_program" type="TABLE">

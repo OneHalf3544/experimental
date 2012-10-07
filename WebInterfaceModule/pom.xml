@@ -40,6 +40,7 @@
                 </executions>
                 <configuration>
                     <sources>
+                        <source>../CommonModule/src/main/webapp</source>
                         <source>../TestCreatorModule/src/main/webapp</source>
                         <source>../TesterModule/src/main/webapp</source>
                         <source>../WebInterfaceModule/src/main/webapp</source>

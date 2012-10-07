@@ -5,7 +5,7 @@ import ru.onehalf.testprogram.data.dataobjects.TestSet;
 import java.util.List;
 
 /**
- * DAO для получения информации по набору вопросов
+ * A DAO for getting info about question set
  * <p/>
  * Created: 15.04.12 19:30
  * <p/>
@@ -14,7 +14,22 @@ import java.util.List;
  */
 public interface TestSetDao {
 
+    /**
+     * Load test set object by id
+     * @param id identity of test set
+     * @return test set data
+     */
     public TestSet loadTestSetById(Long id);
 
+    /**
+     * Get all test sets
+     * @return
+     */
     public List<TestSet> loadTestSetList();
+
+    /**
+     * Add or update data
+     * @param testSet
+     */
+    public void saveOrUpdate(TestSet testSet);
 }

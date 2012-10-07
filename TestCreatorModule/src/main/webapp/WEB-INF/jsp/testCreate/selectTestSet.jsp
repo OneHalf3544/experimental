@@ -4,7 +4,7 @@
 <%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <%@taglib uri="http://onehalf.ru/tags" prefix="t"%>
 <t:htmlPageTemplate>
-    <jsp:attribute name="title"><spring:message code="testset.selectpage.title"/></jsp:attribute>
+    <jsp:attribute name="title">Выбор тестового набора для редактирования</jsp:attribute>
     <jsp:body>
         <c:url var="actionUrl" value="/spring/testSetSelect"/>
         <form action="${actionUrl}" method="post">

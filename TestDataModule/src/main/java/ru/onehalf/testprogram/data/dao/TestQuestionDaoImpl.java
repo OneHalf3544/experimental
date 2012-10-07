@@ -11,7 +11,7 @@ import ru.onehalf.testprogram.data.dataobjects.TestQuestion;
 import java.util.List;
 
 /**
- * <p/>
+ * Implementing of dao interface to access questions in the database
  * <p/>
  * Created: 13.04.12 11:31
  * <p/>
@@ -41,5 +41,11 @@ public class TestQuestionDaoImpl implements TestQuestionDao {
     @SuppressWarnings("unchecked")
     public List<TestQuestion> getTestSet(Integer testSetNo) {
         return hibernateTemplate.find("from TestQuestion where testSetNo = ? order by testNumber", testSetNo);
+    }
+
+    @Override
+    @Transactional
+    public void insert(TestQuestion question) {
+        hibernateTemplate.save(question);
     }
 }

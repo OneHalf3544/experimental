@@ -6,12 +6,20 @@
 <t:htmlPageTemplate>
     <jsp:attribute name="title">Create question</jsp:attribute>
     <jsp:body>
-        <c:url var="actionUrl" value="spring/createTest.jsp" />
-        <form:form commandName="question" action="${actionUrl}" method="post">
-            <form:textarea path="" rows="10" cols="20"/>
-            <form:input path="" name="name" value=""/>
-
-            <input type="button" value="Добавить вариант" />
+        <c:url var="actionUrl" value="/spring/create/question" />
+        <form:form commandName="createdQuestion" action="${actionUrl}" method="post">
+            <form:hidden path="testSetNo"/>
+            <form:hidden path="testNumber"/>
+            <form:textarea path="question" rows="7" cols="60"/><form:errors path="question"/>
+            <ul>
+                <li><form:input path="variant0" /><form:errors path="variant0"/></li>
+                <li><form:input path="variant1" /><form:errors path="variant1"/></li>
+                <li><form:input path="variant2" /><form:errors path="variant2"/></li>
+                <li><form:input path="variant3" /><form:errors path="variant3"/></li>
+                <li><form:input path="variant4" /><form:errors path="variant4"/></li>
+            </ul>
+            <form:input path="rightVariant"/><form:errors path="rightVariant"/>
+            
             <input type="submit" value="submit"/>
         </form:form>
     </jsp:body>
