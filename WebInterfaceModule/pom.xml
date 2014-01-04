@@ -34,12 +34,11 @@
                     <execution>
                         <phase>process-resources</phase>
                         <goals>
-                            <goal>directory-single</goal>
+                            <goal>single</goal>
                         </goals>
                     </execution>
                 </executions>
                 <configuration>
-                    <outputDirectory>${webappDirectory}</outputDirectory>
                     <descriptor>src/main/assembly/assembly.xml</descriptor>
                 </configuration>
             </plugin>
@@ -50,7 +49,7 @@
                 <version>2.2</version>
                 <configuration>
                     <webappDirectory>${webappDirectory}</webappDirectory>
-                    <warName>${project.groupId}</warName>
+                    <warName>${project.parent.artifactId}</warName>
                 </configuration>
                 <executions>
                     <execution>
