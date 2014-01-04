@@ -3,8 +3,8 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <parent>
+        <groupId>ru.onehalf.testprogram</groupId>
         <artifactId>TestProgram</artifactId>
-        <groupId>TestProgram</groupId>
         <version>1.0</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
@@ -16,12 +16,12 @@
     <dependencies>
         <!-- Internal dependencies -->
         <dependency>
-            <groupId>TestProgram</groupId>
+            <groupId>ru.onehalf.testprogram</groupId>
             <artifactId>CommonModule</artifactId>
             <version>1.0</version>
         </dependency>
         <dependency>
-            <groupId>TestProgram</groupId>
+            <groupId>ru.onehalf.testprogram</groupId>
             <artifactId>TestDataModule</artifactId>
             <version>1.0</version>
         </dependency>
@@ -41,6 +41,7 @@
             <groupId>javax.servlet</groupId>
             <artifactId>jstl</artifactId>
             <version>1.2</version>
+            <scope>provided</scope>
         </dependency>
     </dependencies>
 </project>

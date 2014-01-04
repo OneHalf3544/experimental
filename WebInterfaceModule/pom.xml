@@ -3,8 +3,8 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <parent>
+        <groupId>ru.onehalf.testprogram</groupId>
         <artifactId>TestProgram</artifactId>
-        <groupId>TestProgram</groupId>
         <version>1.0</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
@@ -27,25 +27,20 @@
 
         <plugins>
             <plugin>
-                <groupId>TestProgram</groupId>
-                <artifactId>maven-resource-copy-plugin</artifactId>
-                <version>1.0</version>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-assembly-plugin</artifactId>
+                <version>2.4</version>
                 <executions>
                     <execution>
                         <phase>process-resources</phase>
                         <goals>
-                            <goal>copy</goal>
+                            <goal>directory-single</goal>
                         </goals>
                     </execution>
                 </executions>
                 <configuration>
-                    <sources>
-                        <source>../CommonModule/src/main/webapp</source>
-                        <source>../TestCreatorModule/src/main/webapp</source>
-                        <source>../TesterModule/src/main/webapp</source>
-                        <source>../WebInterfaceModule/src/main/webapp</source>
-                    </sources>
-                    <destination>${webappDirectory}</destination>
+                    <outputDirectory>${webappDirectory}</outputDirectory>
+                    <descriptor>src/main/assembly/assembly.xml</descriptor>
                 </configuration>
             </plugin>
 
@@ -70,17 +65,22 @@
 
     <dependencies>
         <dependency>
-            <groupId>TestProgram</groupId>
+            <groupId>ru.onehalf.testprogram</groupId>
+            <artifactId>ProfileModule</artifactId>
+            <version>1.0</version>
+        </dependency>
+        <dependency>
+            <groupId>ru.onehalf.testprogram</groupId>
             <artifactId>TesterModule</artifactId>
             <version>1.0</version>
         </dependency>
         <dependency>
-            <groupId>TestProgram</groupId>
+            <groupId>ru.onehalf.testprogram</groupId>
             <artifactId>TestCreatorModule</artifactId>
             <version>1.0</version>
         </dependency>
         <dependency>
-            <groupId>TestProgram</groupId>
+            <groupId>ru.onehalf.testprogram</groupId>
             <artifactId>TestDataModule</artifactId>
             <version>1.0</version>
         </dependency>

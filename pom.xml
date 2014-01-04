@@ -4,7 +4,7 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>TestProgram</groupId>
+    <groupId>ru.onehalf.testprogram</groupId>
     <artifactId>TestProgram</artifactId>
     <packaging>pom</packaging>
     <version>1.0</version>
@@ -18,10 +18,12 @@
         <!-- Dao module for operating with test's data -->
         <module>TestDataModule</module>
         <module>CommonModule</module>
+        <module>ProfileModule</module>
     </modules>
 
     <properties>
-        <org.springframework-version>3.1.0.RELEASE</org.springframework-version>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <org.springframework-version>3.1.2.RELEASE</org.springframework-version>
     </properties>
 
     <dependencies>
@@ -34,6 +36,7 @@
             <groupId>javax.servlet</groupId>
             <artifactId>servlet-api</artifactId>
             <version>2.5</version>
+            <scope>provided</scope>
         </dependency>
         <dependency>
             <groupId>javax.validation</groupId>
