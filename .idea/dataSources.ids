@@ -43,6 +43,13 @@
         <url>file://$PROJECT_DIR$/mysql-connector-license.txt</url>
       </library>
     </libraries>
+    <table name="profiles" schema="" catalog="test_program" type="TABLE">
+      <column name="UID" sqlType="INT" length="10" precision="0" nullable="false" jdbcType="4" autoIncrement="true" />
+      <column name="FAMILY" sqlType="VARCHAR" length="20" precision="0" nullable="false" jdbcType="12" />
+      <column name="SURNAME" sqlType="VARCHAR" length="20" precision="0" nullable="false" jdbcType="12" />
+      <column name="COMPLETED_TESTS" sqlType="INT" length="10" precision="0" nullable="false" jdbcType="4" def="MA==" />
+      <primary-key name="PRIMARY" columns="uid" />
+    </table>
     <table name="test_question" schema="" catalog="test_program" type="TABLE">
       <column name="ID" sqlType="INT" length="10" precision="0" nullable="false" jdbcType="4" autoIncrement="true" />
       <column name="TEST_SET_ID" sqlType="INT" length="10" precision="0" nullable="false" jdbcType="4" />

@@ -6,8 +6,10 @@
       <element id="directory" name="WEB-INF">
         <element id="directory" name="classes">
           <element id="module-output" name="TesterModule" />
+          <element id="module-output" name="TestDataModule" />
         </element>
       </element>
+      <element id="artifact" artifact-name="CommonModule:war exploded" />
     </root>
   </artifact>
 </component>

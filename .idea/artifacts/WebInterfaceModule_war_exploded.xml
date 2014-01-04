@@ -2,11 +2,10 @@
   <artifact type="exploded-war" name="WebInterfaceModule:war exploded">
     <output-path>$PROJECT_DIR$/out/artifacts/WebInterfaceModule_war_exploded</output-path>
     <root id="root">
-      <element id="javaee-facet-resources" facet="WebInterfaceModule/web/Web" />
       <element id="directory" name="WEB-INF">
         <element id="directory" name="classes">
           <element id="module-output" name="WebInterfaceModule" />
-          <element id="module-output" name="TestDataModule" />
+          <element id="module-output" name="ProfileModule" />
         </element>
         <element id="directory" name="lib">
           <element id="library" level="project" name="Maven: javassist:javassist:3.12.1.GA" />
@@ -40,12 +39,24 @@
           <element id="library" level="project" name="Maven: org.springframework:spring-context-support:3.1.0.RELEASE" />
           <element id="library" level="project" name="Maven: javax.servlet:jstl:1.2" />
           <element id="library" level="project" name="Maven: org.slf4j:slf4j-api:1.5.8" />
+          <element id="library" level="project" name="Maven: commons-lang:commons-lang:2.5" />
+          <element id="library" level="project" name="Maven: log4j:log4j:1.2.16" />
+          <element id="library" level="project" name="Maven: org.springframework:spring-aop:3.1.2.RELEASE" />
+          <element id="library" level="project" name="Maven: org.springframework:spring-asm:3.1.2.RELEASE" />
+          <element id="library" level="project" name="Maven: org.springframework:spring-beans:3.1.2.RELEASE" />
+          <element id="library" level="project" name="Maven: org.springframework:spring-context:3.1.2.RELEASE" />
+          <element id="library" level="project" name="Maven: org.springframework:spring-core:3.1.2.RELEASE" />
+          <element id="library" level="project" name="Maven: org.springframework:spring-expression:3.1.2.RELEASE" />
+          <element id="library" level="project" name="Maven: org.springframework:spring-oxm:3.1.2.RELEASE" />
         </element>
+        <element id="javaee-facet-resources" facet="WebInterfaceModule/web/Web" />
       </element>
       <element id="directory" name="META-INF">
         <element id="file-copy" path="$PROJECT_DIR$/WebInterfaceModule/src/main/resources/META-INF/MANIFEST.MF" />
       </element>
+      <element id="artifact" artifact-name="CommonModule:war exploded" />
       <element id="artifact" artifact-name="TestCreatorModule:war exploded" />
+      <element id="artifact" artifact-name="TesterModule:war exploded" />
     </root>
   </artifact>
 </component>
