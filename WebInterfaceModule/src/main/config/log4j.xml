@@ -3,7 +3,7 @@
 <log4j:configuration>
 
     <appender name="RollingFileAppender" class="org.apache.log4j.DailyRollingFileAppender">
-        <param name="File" value="./logs/TestProgram.log" />
+        <param name="File" value="C:/Program Files (x86)/Apache Software Foundation/Tomcat 7.0/logs/TestProgram.log" />
         <layout class="org.apache.log4j.PatternLayout">
             <param name="ConversionPattern" value="%-4r [%t] %-5p %c %x - %m%n"/>
         </layout>

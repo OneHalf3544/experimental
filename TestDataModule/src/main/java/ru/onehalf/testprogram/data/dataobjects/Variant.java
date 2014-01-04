@@ -1,5 +1,7 @@
 package ru.onehalf.testprogram.data.dataobjects;
 
+import org.hibernate.annotations.ForeignKey;
+
 import javax.persistence.*;
 
 /**
@@ -14,13 +16,22 @@ import javax.persistence.*;
 @Table(name = "VARIANTS")
 public class Variant {
 
+    public Variant() {
+    }
+
+    public Variant(TestQuestion question, String text) {
+        this.question = question;
+        this.text = text;
+    }
+
     @Id
     @Column(name = "ID")
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
 
-    @Column(name = "QUESTION_ID")
-    private Long questionId;
+    @ForeignKey(name = "QUESTION_ID", inverseName = "ID")
+    @ManyToOne(cascade = CascadeType.ALL)
+    private TestQuestion question;
     
     @Column(name = "TEXT")
     private String text;
@@ -33,12 +44,12 @@ public class Variant {
         this.id = id;
     }
 
-    public Long getQuestionId() {
-        return questionId;
+    public TestQuestion getQuestion() {
+        return question;
     }
 
-    public void setQuestionId(Long questionId) {
-        this.questionId = questionId;
+    public void setQuestion(TestQuestion question) {
+        this.question = question;
     }
 
     public String getText() {

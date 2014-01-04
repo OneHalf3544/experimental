@@ -29,10 +29,13 @@ public class TestQuestion {
     @Column(name = "QUESTION", length = 255)
     private String question;
 
-    @OneToMany(fetch = FetchType.EAGER, mappedBy = "questionId", cascade = CascadeType.ALL)
+    @OneToMany(fetch = FetchType.EAGER, mappedBy = "question", cascade = CascadeType.ALL)
     private List<Variant> variants;
 
-    @Column(name = "RIGHT_ANSWER")
+    /**
+     * Правильный вариант
+     */
+    @Column(name = "RIGHT_VARIANT_ID")
     private Integer rightAnswer;
 
     public Integer getId() {
@@ -79,7 +82,7 @@ public class TestQuestion {
         return rightAnswer;
     }
 
-    public void setRightAnswer(Integer rightAnswer) {
+    public void setRightAnswer(Integer  rightAnswer) {
         this.rightAnswer = rightAnswer;
     }
 }

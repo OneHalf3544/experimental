@@ -3,8 +3,8 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <parent>
+        <groupId>ru.onehalf.testprogram</groupId>
         <artifactId>TestProgram</artifactId>
-        <groupId>TestProgram</groupId>
         <version>1.0</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
@@ -12,7 +12,7 @@
     <artifactId>WebInterfaceModule</artifactId>
 
     <properties>
-        <webappDirectory>${project.build.outputDirectory}/webappResources</webappDirectory>
+        <webappDirectory>${project.build.directory}/webapp</webappDirectory>
     </properties>
 
     <build>
@@ -27,20 +27,19 @@
 
         <plugins>
             <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-assembly-plugin</artifactId>
-                <version>2.2.2</version>
+                <version>2.4</version>
                 <executions>
                     <execution>
                         <phase>process-resources</phase>
                         <goals>
-                            <goal>directory</goal>
+                            <goal>single</goal>
                         </goals>
                     </execution>
                 </executions>
                 <configuration>
-                    <descriptors>
-                        <descriptor>src/main/assembly/assembly.xml</descriptor>
-                    </descriptors>
+                    <descriptor>src/main/assembly/assembly.xml</descriptor>
                 </configuration>
             </plugin>
 
@@ -50,7 +49,7 @@
                 <version>2.2</version>
                 <configuration>
                     <webappDirectory>${webappDirectory}</webappDirectory>
-                    <warName>${project.groupId}</warName>
+                    <warName>${project.parent.artifactId}</warName>
                 </configuration>
                 <executions>
                     <execution>
@@ -65,17 +64,22 @@
 
     <dependencies>
         <dependency>
-            <groupId>org.apache.maven.plugins</groupId>
-            <artifactId>maven-assembly-plugin</artifactId>
-            <version>2.2.2</version>
+            <groupId>ru.onehalf.testprogram</groupId>
+            <artifactId>ProfileModule</artifactId>
+            <version>1.0</version>
         </dependency>
         <dependency>
-            <groupId>TestProgram</groupId>
+            <groupId>ru.onehalf.testprogram</groupId>
             <artifactId>TesterModule</artifactId>
             <version>1.0</version>
         </dependency>
         <dependency>
-            <groupId>TestProgram</groupId>
+            <groupId>ru.onehalf.testprogram</groupId>
+            <artifactId>TestCreatorModule</artifactId>
+            <version>1.0</version>
+        </dependency>
+        <dependency>
+            <groupId>ru.onehalf.testprogram</groupId>
             <artifactId>TestDataModule</artifactId>
             <version>1.0</version>
         </dependency>
