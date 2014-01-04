@@ -67,7 +67,7 @@ public class QuestionCreatorController {
 
         testQuestion.setQuestion(createdQuestion.getQuestion());
         testQuestion.setVariants(variants);
-        testQuestion.setRightAnswer(variants.get(createdQuestion.getRightVariant()));
+        testQuestion.setRightAnswer(createdQuestion.getRightVariant());
 
         testQuestion.setTestSetNo(createdQuestion.getTestSetNo());
         testQuestion.setTestNumber(createdQuestion.getTestNumber());
