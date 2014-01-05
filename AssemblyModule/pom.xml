@@ -14,10 +14,6 @@
     <artifactId>AssemblyModule</artifactId>
     <version>1.0</version>
 
-    <properties>
-        <webappDirectory>${project.build.directory}/${project.build.finalName}</webappDirectory>
-    </properties>
-
     <dependencies>
         <dependency>
             <groupId>${project.groupId}</groupId>
