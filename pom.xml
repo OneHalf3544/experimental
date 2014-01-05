@@ -9,6 +9,7 @@
     <packaging>pom</packaging>
     <version>1.0</version>
     <modules>
+        <module>AssemblyModule</module>
         <!-- Module for create test's data -->
         <module>TestCreatorModule</module>
         <!-- testing process module -->
