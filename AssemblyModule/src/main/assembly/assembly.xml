@@ -25,4 +25,10 @@
             </sources>
         </moduleSet>
     </moduleSets>
+    <dependencySets>
+        <dependencySet>
+            <scope>runtime</scope>
+            <outputDirectory>lib</outputDirectory>
+        </dependencySet>
+    </dependencySets>
 </assembly>

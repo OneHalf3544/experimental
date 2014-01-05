@@ -15,27 +15,27 @@
     <version>1.0</version>
 
     <properties>
-        <webappDirectory>${project.build.directory}/${build.finalName}</webappDirectory>
+        <webappDirectory>${project.build.directory}/${project.build.finalName}</webappDirectory>
     </properties>
 
     <dependencies>
         <dependency>
-            <groupId>${groupId}</groupId>
+            <groupId>${project.groupId}</groupId>
             <artifactId>CommonModule</artifactId>
             <version>1.0</version>
         </dependency>
         <dependency>
-            <groupId>${groupId}</groupId>
+            <groupId>${project.groupId}</groupId>
             <artifactId>TestCreatorModule</artifactId>
             <version>1.0</version>
         </dependency>
         <dependency>
-            <groupId>${groupId}</groupId>
+            <groupId>${project.groupId}</groupId>
             <artifactId>TesterModule</artifactId>
             <version>1.0</version>
         </dependency>
         <dependency>
-            <groupId>${groupId}</groupId>
+            <groupId>${project.groupId}</groupId>
             <artifactId>WebInterfaceModule</artifactId>
             <version>1.0</version>
         </dependency>
@@ -59,23 +59,6 @@
                     <appendAssemblyId>false</appendAssemblyId>
                     <descriptor>src/main/assembly/assembly.xml</descriptor>
                 </configuration>
-            </plugin>
-
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-war-plugin</artifactId>
-                <version>2.2</version>
-                <configuration>
-                    <webappDirectory>${webappDirectory}</webappDirectory>
-                    <warName>${project.parent.artifactId}</warName>
-                </configuration>
-                <executions>
-                    <execution>
-                        <goals>
-                            <goal>war</goal>
-                        </goals>
-                    </execution>
-                </executions>
             </plugin>
         </plugins>
     </build>
