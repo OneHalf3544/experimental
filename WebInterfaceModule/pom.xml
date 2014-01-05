@@ -11,9 +11,16 @@
 
     <artifactId>WebInterfaceModule</artifactId>
 
-    <properties>
-        <webappDirectory>${project.build.directory}/webapp</webappDirectory>
-    </properties>
+    <profiles>
+        <profile>
+            <id>example</id>
+            <build>
+                <filters>
+                    <filter>src/main/filters/default.properties</filter>
+                </filters>
+            </build>
+        </profile>
+    </profiles>
 
     <build>
         <resources>
@@ -24,42 +31,6 @@
                 <directory>src/main/resources</directory>
             </resource>
         </resources>
-
-        <plugins>
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-assembly-plugin</artifactId>
-                <version>2.4</version>
-                <executions>
-                    <execution>
-                        <phase>process-resources</phase>
-                        <goals>
-                            <goal>single</goal>
-                        </goals>
-                    </execution>
-                </executions>
-                <configuration>
-                    <descriptor>src/main/assembly/assembly.xml</descriptor>
-                </configuration>
-            </plugin>
-
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-war-plugin</artifactId>
-                <version>2.2</version>
-                <configuration>
-                    <webappDirectory>${webappDirectory}</webappDirectory>
-                    <warName>${project.parent.artifactId}</warName>
-                </configuration>
-                <executions>
-                    <execution>
-                        <goals>
-                            <goal>war</goal>
-                        </goals>
-                    </execution>
-                </executions>
-            </plugin>
-        </plugins>
     </build>
 
     <dependencies>
