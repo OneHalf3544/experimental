@@ -9,7 +9,7 @@
         <artifactId>TestProgram</artifactId>
         <version>1.0</version>
     </parent>
-    <packaging>war</packaging>
+    <packaging>pom</packaging>
 
     <artifactId>AssemblyModule</artifactId>
     <version>1.0</version>

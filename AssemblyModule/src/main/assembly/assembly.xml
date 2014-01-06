@@ -21,6 +21,13 @@
                     <fileSet>
                         <directory>src/main/webapp</directory>
                     </fileSet>
+                    <fileSet>
+                        <outputDirectory>WEB-INF/conf</outputDirectory>
+                        <directory>src/main/config</directory>
+                        <excludes>
+                            <exclude>log4j.xml</exclude>
+                        </excludes>
+                    </fileSet>
                 </fileSets>
             </sources>
         </moduleSet>
