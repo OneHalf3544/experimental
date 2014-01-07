@@ -1,0 +1,11 @@
+apply plugin: "war"
+
+dependencies {
+    compile project(":ProfileModule")
+    compile project(":TesterModule")
+    compile project(":TestCreatorModule")
+    compile project(":TestDataModule")
+    compile "org.springframework:spring-web:${springframeworkVersion}"
+    compile "org.springframework:spring-webmvc:${springframeworkVersion}"
+    provided "javax.servlet:jstl:1.2"
+}

@@ -1,0 +1,7 @@
+dependencies {
+    compile project(":CommonModule")
+    compile project(":TestDataModule")
+    compile "org.springframework:spring-web:${springframeworkVersion}"
+    compile "org.springframework:spring-webmvc:${springframeworkVersion}"
+    provided "javax.servlet:jstl:1.2"
+}

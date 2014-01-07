@@ -1,0 +1,6 @@
+dependencies {
+    compile "log4j:log4j:1.2.16"
+    compile "javax.validation:validation-api:1.0.0.GA"
+    compile "org.hibernate:hibernate-validator:4.2.0.Final"
+    provided "javax.servlet:servlet-api:2.5"
+}
