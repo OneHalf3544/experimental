@@ -1,3 +1,5 @@
+apply plugin: "war"
+
 ext {
     springframeworkVersion = "3.1.2.RELEASE"
     hibernateVersion = "3.5.6-Final"
@@ -26,17 +28,9 @@ allprojects {
         compile "org.hibernate:hibernate-validator:4.2.0.Final"
         provided "javax.servlet:servlet-api:2.5"
     }
-}
 
-/*
-project(':api') {
-    dependencies {
-        compile project(':shared')
-    }
+/*    task copyWebappResources(type: Copy) {
+        from 'src/main/webapp'
+        into 'build/explodedWar'
+    }*/
 }
-
-project(':services:personService') {
-    dependencies {
-        compile project(':shared'), project(':api')
-    }
-}*/
