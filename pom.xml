@@ -5,7 +5,7 @@
     <groupId>ru.onehalf.testprogram</groupId>
     <artifactId>TestProgram</artifactId>
     <packaging>pom</packaging>
-    <version>1.1-SNAPSHOT</version>
+    <version>1.1</version>
     <modules>
         <module>AssemblyModule</module>
         <!-- Module for create test's data -->
