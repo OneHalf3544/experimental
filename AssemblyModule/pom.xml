@@ -5,33 +5,33 @@
     <parent>
         <groupId>ru.onehalf.testprogram</groupId>
         <artifactId>TestProgram</artifactId>
-        <version>1.3-RELEASE</version>
+        <version>1.4-SNAPSHOT</version>
     </parent>
     <packaging>war</packaging>
 
     <artifactId>AssemblyModule</artifactId>
-    <version>1.3-RELEASE</version>
+    <version>1.4-SNAPSHOT</version>
 
     <dependencies>
         <dependency>
             <groupId>${project.groupId}</groupId>
             <artifactId>CommonModule</artifactId>
-            <version>1.3-RELEASE</version>
+            <version>1.4-SNAPSHOT</version>
         </dependency>
         <dependency>
             <groupId>${project.groupId}</groupId>
             <artifactId>TestCreatorModule</artifactId>
-            <version>1.3-RELEASE</version>
+            <version>1.4-SNAPSHOT</version>
         </dependency>
         <dependency>
             <groupId>${project.groupId}</groupId>
             <artifactId>TesterModule</artifactId>
-            <version>1.3-RELEASE</version>
+            <version>1.4-SNAPSHOT</version>
         </dependency>
         <dependency>
             <groupId>${project.groupId}</groupId>
             <artifactId>WebInterfaceModule</artifactId>
-            <version>1.3-RELEASE</version>
+            <version>1.4-SNAPSHOT</version>
         </dependency>
     </dependencies>
 
