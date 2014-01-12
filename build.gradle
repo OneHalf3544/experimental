@@ -1,11 +1,9 @@
-apply plugin: "war"
-
 ext {
     springframeworkVersion = "3.1.2.RELEASE"
     hibernateVersion = "3.5.6-Final"
 }
 
-allprojects {
+subprojects {
     apply plugin: 'java'
 
     sourceCompatibility = 1.7
