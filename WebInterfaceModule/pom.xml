@@ -3,12 +3,12 @@
     <parent>
         <groupId>ru.onehalf.testprogram</groupId>
         <artifactId>TestProgram</artifactId>
-        <version>1.2</version>
+        <version>1.3-SNAPSHOT</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
     <artifactId>WebInterfaceModule</artifactId>
-    <version>1.2</version>
+    <version>1.3-SNAPSHOT</version>
 
     <profiles>
         <profile>
@@ -36,22 +36,22 @@
         <dependency>
             <groupId>ru.onehalf.testprogram</groupId>
             <artifactId>ProfileModule</artifactId>
-            <version>1.2</version>
+            <version>1.3-SNAPSHOT</version>
         </dependency>
         <dependency>
             <groupId>ru.onehalf.testprogram</groupId>
             <artifactId>TesterModule</artifactId>
-            <version>1.2</version>
+            <version>1.3-SNAPSHOT</version>
         </dependency>
         <dependency>
             <groupId>ru.onehalf.testprogram</groupId>
             <artifactId>TestCreatorModule</artifactId>
-            <version>1.2</version>
+            <version>1.3-SNAPSHOT</version>
         </dependency>
         <dependency>
             <groupId>ru.onehalf.testprogram</groupId>
             <artifactId>TestDataModule</artifactId>
-            <version>1.2</version>
+            <version>1.3-SNAPSHOT</version>
         </dependency>
         <dependency>
             <groupId>org.springframework</groupId>
