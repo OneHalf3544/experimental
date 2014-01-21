@@ -1,0 +1,16 @@
+<tests>
+    <test>
+        <test-name>Пример теста</test-name>
+        <variant>Вариант 1</variant>
+        <variant>Вариант 2</variant>
+        <variant>Вариант 3</variant>
+        <correct-answer>2</correct-answer>
+    </test>
+    <test>
+        <test-name>Пример теста 2</test-name>
+        <variant>Вариант 1a</variant>
+        <variant>Вариант 2a</variant>
+        <variant>Вариант 3a</variant>
+        <correct-answer>3</correct-answer>
+    </test>
+</tests>
