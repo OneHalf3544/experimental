@@ -4,15 +4,15 @@
     <xs:element name="tests">
         <xs:complexType>
             <xs:sequence>
-                <xs:element name="test" type="Test" minOccurs="0" maxOccurs="unbounded"/>
+                <xs:element name="test" type="TestItem" minOccurs="0" maxOccurs="unbounded"/>
             </xs:sequence>
         </xs:complexType>
     </xs:element>
 
-    <xs:complexType name="Test">
+    <xs:complexType name="TestItem">
         <xs:sequence>
             <xs:element name="test-name" type="xs:string"/>
-            <xs:element name="variant" type="xs:string"/>
+            <xs:element name="variant" type="xs:string" minOccurs="1" maxOccurs="unbounded"/>
             <xs:element name="correct-answer" type="xs:int"/>
         </xs:sequence>
     </xs:complexType>
