@@ -28,6 +28,32 @@
                     <packageName>ru.onehalf.testprogram.restapi.stubs</packageName>
                 </configuration>
             </plugin>
+            <plugin>
+                <groupId>org.jibx</groupId>
+                <artifactId>jibx-maven-plugin</artifactId>
+                <version>1.2.5</version>
+                <configuration>
+                    <schemaLocation>src/main/xsd</schemaLocation>
+                    <defaultPackage>ru.onehalf.testprogram.restapi.jibxstubs</defaultPackage>
+                    <schemaBindingDirectory>target/generated-sources/jibx</schemaBindingDirectory>
+                </configuration>
+                <executions>
+                    <execution>
+                        <id>jibx-src-gen</id>
+                        <goals>
+                            <goal>schema-codegen</goal>
+                        </goals>
+                        <phase>generate-resources</phase>
+                    </execution>
+                    <execution>
+                        <id>jibx-bind</id>
+                        <goals>
+                            <goal>bind</goal>
+                        </goals>
+                        <phase>process-classes</phase>
+                    </execution>
+                </executions>
+            </plugin>
         </plugins>
     </build>
 
@@ -41,6 +67,11 @@
             <groupId>commons-io</groupId>
             <artifactId>commons-io</artifactId>
             <version>2.4</version>
+        </dependency>
+        <dependency>
+            <groupId>org.jibx</groupId>
+            <artifactId>jibx-run</artifactId>
+            <version>1.2.5</version>
         </dependency>
     </dependencies>
 </project>
