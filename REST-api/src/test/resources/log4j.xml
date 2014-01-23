@@ -9,7 +9,7 @@
         </layout>
     </appender>
 
-    <logger name="ru.yandex.money">
+    <logger name="ru.onehalf.testprogram">
         <level value="INFO" />
     </logger>
 
