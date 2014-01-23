@@ -1,6 +1,7 @@
 package ru.onehalf.testprogram.restapi;
 
 import org.hamcrest.Matchers;
+import org.jibx.runtime.JiBXException;
 import org.junit.Test;
 import ru.onehalf.testprogram.restapi.jibxstubs.Tests;
 
@@ -10,7 +11,11 @@ import static org.junit.Assert.assertThat;
 
 public class JibxSerializingTest {
 
-    private final JibxSerializing instance = new JibxSerializing();
+    private final JibxSerializing instance;
+
+    public JibxSerializingTest() throws JiBXException {
+        instance = new JibxSerializing();
+    }
 
     @Test
     public void testJibxSerializing() throws Exception {
